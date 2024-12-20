@@ -40,7 +40,7 @@ export function NavMain({
           <DropdownMenu key={item.title}>
             <SidebarMenuItem>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+                <SidebarMenuButton tooltip={item.title} className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
                 {item.icon && <item.icon />}
                 {item.title} <MoreHorizontal className="ml-auto" />
                 </SidebarMenuButton>
