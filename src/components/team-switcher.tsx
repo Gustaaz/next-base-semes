@@ -25,7 +25,7 @@ export function TeamSwitcher({
             size="lg"
             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
-            <Image src="/Brasao.svg" alt="VivaBem" width={40} height={40} />
+            <Image src="/Brasao.svg" alt="VivaBem" width={0} height={0} className="w-10 h-auto" />
 
             <div className="grid flex-1 text-left text-sm leading-tight">
               <span className="truncate font-semibold">{teams.name}</span>
