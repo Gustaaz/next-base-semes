@@ -74,9 +74,9 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Status",
     cell: ({ row }) => {
        const color = {
-        PENDENTE: "bg-blue-500",
-        APROVADOS: "bg-green-500",
-        REPROVADOS: "bg-red-500",
+        PENDENTE: "bg-blue-500 hover:bg-blue-600",
+        APROVADOS: "bg-green-500 hover:bg-green-600",
+        REPROVADOS: "bg-red-500 hover:bg-red-600",
        }
 
        const status = row.getValue("status")
