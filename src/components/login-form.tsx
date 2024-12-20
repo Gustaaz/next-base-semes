@@ -31,7 +31,7 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
-  const { toast } = useToast()
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -63,9 +63,11 @@ export function LoginForm({
             >
               <Image
                 src="/vivabem.svg"
-                alt="Next.js Logo"
-                width={200}
-                height={200}
+                alt="Viva Bem Logo" // Make sure to update the alt text to be more descriptive
+                width={0}
+                height={0}
+                className="w-52 h-auto"
+                priority // Adding priority here
               />
             </Link>
 
@@ -78,7 +80,7 @@ export function LoginForm({
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="m@exemplo.com" {...field} />
+                        <Input autoComplete="email" placeholder="m@exemplo.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -104,6 +106,7 @@ export function LoginForm({
                         <Input
                           type="password"
                           placeholder="*******"
+                          autoComplete="password"
                           {...field}
                         />
                       </FormControl>
