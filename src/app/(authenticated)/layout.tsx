@@ -4,7 +4,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "@/components/layout-app/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -50,7 +50,7 @@ export default function RootLayout({
           </div>
           <ModeToggle />
         </header>
-        {children}
+        <div className="flex flex-1 flex-col gap-4 p-4">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   );

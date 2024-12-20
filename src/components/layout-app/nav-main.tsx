@@ -52,7 +52,7 @@ export function NavMain({
                   className="min-w-56 rounded-lg"
                 >
                   {item.items.map((item) => (
-                    <DropdownMenuItem asChild key={item.title}>
+                    <DropdownMenuItem asChild key={item.title} className="cursor-pointer">
                       <Link href={item.url}>{item.title}</Link>
                     </DropdownMenuItem>
                   ))}
