@@ -1,4 +1,8 @@
 import { AppSidebar } from "@/components/app-sidebar"
+import { AreaChartInteractive } from "@/components/charts/area-chart-interactive"
+import { BarChartMultiple } from "@/components/charts/bar-chart-multiple"
+import { PieChartDonut } from "@/components/charts/pie-chart-donut"
+import { RadarChartCircle } from "@/components/charts/radar-chart-circle"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -43,11 +47,13 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
+            <PieChartDonut />
+            <RadarChartCircle />
+            <BarChartMultiple />
           </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+          
+           <AreaChartInteractive />
+       
         </div>
       </SidebarInset>
     </SidebarProvider>
