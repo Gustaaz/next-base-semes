@@ -44,7 +44,7 @@ const data = {
         },
         {
           title: "Cadastrar Novo Aluno",
-          url: "#",
+          url: "/alunos/cadastrar",
         },
       ],
     },
@@ -89,7 +89,7 @@ const data = {
       items: [
         {
           title: "Consultar Usuarios",
-          url: "#",
+          url: "/usuarios",
         },
         {
           title: "Cadastrar Novo Usuario",
