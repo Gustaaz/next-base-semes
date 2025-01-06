@@ -13,7 +13,12 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
+import {
+  ArrowUpDown,
+  ChevronDown,
+  MoreHorizontal,
+  PlusIcon,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -36,6 +41,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 type Funcoes = {
   nome: "ROLE_ADMIN" | "ROLE_COODERNADOR" | "ROLE_PROFESSOR";
@@ -223,7 +229,7 @@ export default function UserTable({ data }: StudentTableProps) {
           }
           className="max-w-sm"
         />
-        <DropdownMenu>
+        {/* <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
               Columns <ChevronDown />
@@ -248,7 +254,13 @@ export default function UserTable({ data }: StudentTableProps) {
                 );
               })}
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu> */}
+        <Button asChild className="ml-auto">
+          <Link href="/alunos/cadastrar">
+            <PlusIcon />
+            Novo Usuario
+          </Link>
+        </Button>
       </div>
       <div className="rounded-md border">
         <Table>
